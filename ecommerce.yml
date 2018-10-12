@@ -1,0 +1,3 @@
+ecommerce:
+  maxOrders: 5
+  minOrders: 1
