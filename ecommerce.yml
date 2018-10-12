@@ -1,6 +1,7 @@
 ---
+lucky-word: Irish
 ecommerce:
   maxOrders: 5
   minOrders: 1
-test: 'ola'
+test: ola
 
