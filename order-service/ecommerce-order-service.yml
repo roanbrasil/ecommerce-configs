@@ -20,6 +20,7 @@ eureka:
 
 payment-service:
   ribbon:
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
     eureka:
       enabled: true
     listOfServers: localhost:9094
