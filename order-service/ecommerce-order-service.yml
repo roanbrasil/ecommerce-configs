@@ -22,5 +22,5 @@ payment-service:
   ribbon:
     eureka:
       enabled: true
-    listOfServers: http://localhost:9094
+    listOfServers: localhost:9094
     ServerListRefreshInterval: 15000
