@@ -6,6 +6,9 @@ eureka:
   instance:
     hostname: localhost
     port: 9091
+    #preferIpAddress: true
+    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+
   client:
     registerWithEureka: true
     fetchRegistry: false

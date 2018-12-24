@@ -6,6 +6,7 @@ eureka:
   instance:
     hostname: localhost
     port: 9091
+   # preferIpAddress: true
   client:
     registerWithEureka: true
     fetchRegistry: false
@@ -13,3 +14,10 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 3000
+
+payment-service:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: http://localhost:9094
+    ServerListRefreshInterval: 15000
