@@ -23,5 +23,5 @@ payment-service:
     NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
     eureka:
       enabled: true
-    listOfServers: localhost:9094
+    #listOfServers: localhost:9094
     ServerListRefreshInterval: 15000
