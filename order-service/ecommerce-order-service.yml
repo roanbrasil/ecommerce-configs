@@ -6,7 +6,10 @@ eureka:
   instance:
     hostname: localhost
     port: 9091
-   # preferIpAddress: true
+    # preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10
+    metadataMap:
+       instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
   client:
     registerWithEureka: true
     fetchRegistry: false
@@ -18,6 +21,6 @@ eureka:
 payment-service:
   ribbon:
     eureka:
-      enabled: false
+      enabled: true
     listOfServers: http://localhost:9094
     ServerListRefreshInterval: 15000
